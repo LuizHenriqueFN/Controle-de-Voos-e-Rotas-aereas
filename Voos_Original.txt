@@ -1,0 +1,861 @@
+#Airport information - USA
+#
+#Fields:
+# 3 - Airport abbreviation
+# 1 - <padding>
+# 5 - Time Zone (offset from GMT)
+# 1 - <padding>
+# 3 - X coordinate on map
+# 1 - <padding>
+# 3 - Y coordinate on map
+# 1 - <padding>
+# remainder - Name of City/Airport
+#
+# Route information
+# Starts after the '!' delimiter
+#
+# Fields:
+#  3 - Source
+#  1 - <padding>
+#  3 - Destination
+#
+ABQ -0800 195 275 Albuquerque, New Mexico
+ATL -0600 470 280 Atlanta, Georgia
+BNA -0700 430 240 Nashville, Tennessee
+BOS -0600 590 100 Boston, Massachusetts
+DCA -0600 540 180 Washington D.C. (National)
+DEN -0800 215 205 Denver, Colorado
+DFW -0700 310 305 Dallas/Fort Worth, Texas
+DTW -0600 445 140 Detroit, Michigan
+HOU -0700 330 355 Houston, Texas (Hobby)
+JFK -0600 565 130 New York (Kennedy)
+LAX -0900  55 270 Los Angeles, California
+MIA -0600 535 390 Miami, Florida
+MSP -0700 340 115 Minneapolis/St Paul, Minnesota
+MSY -0700 405 345 New Orleans, Louisiana
+ORD -0700 410 155 Chicago, Illinois
+PHL -0600 550 155 Philadelphia, Pennsilvania/Wilmington, Delaware
+PHX -0800 120 290 Phoenix, Arizona
+PVD -0600 595 122 Providence/Newport, Rhode Island
+RDU -0600 530 230 Raleigh/Durham, North Carolina
+SEA -0900  55  45 Seattle/Tacoma, Washington
+SFO -0900  10 190 San Francisco, California
+STL -0700 380 210 St Louis, Missouri
+TPA -0600 500 360 Tampa, Florida
+!
+ABQ DEN
+ABQ DFW
+ABQ HOU 
+ABQ LAX
+ABQ ORD
+ABQ PHX
+ABQ SFO
+ATL BNA
+ATL MSY
+ATL RDU
+BNA ORD
+BNA STL
+BOS JFK
+DCA JFK
+DCA RDU
+DEN DFW
+DEN LAX
+DEN ORD
+DFW HOU
+DFW STL
+DTW ORD
+HOU MIA
+
+JFK PHL
+LAX PHX
+LAX SFO
+MIA TPA
+MSP ORD
+MSY DFW
+MSY HOU
+MSY TPA
+ORD STL
+PVD MIA
+PHX SFO
+SEA SFO
+
+#Airplane information
+#
+#Fields:
+# 3 - Airplane Model
+# 1 - <padding>
+# 3 - Capacity
+100 100
+310 310
+320 320
+727 250
+733 290
+734 300
+735 350
+737 400
+744 410
+747 500
+757 450
+763 100
+767 600
+72S 330
+73S 250
+AB3 180
+BE1 280
+BEC 200
+D10 200
+D8S 210
+D9S 300
+DC9 500
+F28 180
+L10 370
+L15 400
+M80 180
+S80 150
+SWM 100
+
+#Airline Flight Schedule - USA
+#
+#Fields:
+# 2 - Airline
+# 4 - Flight
+# 2 - <padding>
+# 3 - Origin Airport
+# 1 - <padding>
+# 5 - Departure Time
+# 2 - <padding>
+# 3 - Destination Airport
+# 1 - <padding>
+# 5 - Arrival Time
+# 2 - <padding>
+# 2 - Meals (S=snack,L=lunch,D=dinner,B=breakfast,#=depends on class)
+# 4 - <padding>
+# 1 - Stops during flight
+# 4 - <padding>
+# 3 - Aircraft type
+# 12 - <padding>
+# remainder - Booking Classes
+#
+AA 748  ABQ  257P  ATL 1047P  S     1    S80            F  Y  M  Q  B
+TW 410  ABQ  628A  DCA  132P  #     1    M80            F  Y  B  Q  M
+UA 785  ABQ  645A  DEN  757A  S     0    733            F  Y  B  M  Q
+YV  11  ABQ  715A  DEN  920A        1    BE1            Y  Q  L  H  M
+AA 202  ABQ  450A  DFW  721A        0    72S           FN YN  B  M  H
+YV  84  ABQ  200P  DFW  637P        2    BE1            Y  Q  L  H  M
+WN 515  ABQ  610A  HOU  905A        0    733            Y  K  L  B  Q
+WN  29  ABQ 1005A  HOU  225P        2    733            Y  K  L  B  Q
+WN  31  ABQ 1050A  HOU  255P        1    73S            Y  K  L  B  Q
+WN 530  ABQ  700A  LAX  750A        0    73S            Y  K  L  B  Q
+WN 994  ABQ  100P  LAX  250P        1    73S            Y  K  L  B  Q
+AA 880  ABQ  915A  MIA  439P  VL    1    72S            F  Y  M  Q  B
+UA 982  ABQ  829A  MSP  124P  SL    1    72S            F  Y  B  M  Q
+DL1042  ABQ  630A  MSY 1105A  #     1    72S           F@ Y@ B@ M@ Q@
+AA1186  ABQ  845A  ORD 1227P  B     0    S80            F  Y  B  H  M
+TW  88  ABQ  328P  ORD  856P  #     1    M80            F  Y  B  Q  M
+WN 483  ABQ  830A  PHX  940A        0    733            Y  K  L  B  Q
+HP 845  ABQ  255P  SEA  718P  S     1    73S            Y  B  H  Q  V
+WN 592  ABQ  820A  SFO  950A        0    733            Y  K  L  B  Q
+WN 515  ABQ  610A  STL 1120A        1    733            Y  K  L  B  Q
+DL 545  ATL 1144A  ABQ  405P  L     2    72S            F  Y  B  M  Q
+AA1271  ATL  440P  ABQ  826P  D     1    72S            F  Y  H  B  M
+DL1166  ATL  632A  BNA  625A  #     0    73S           FN YN BN MN QN
+DL 850  ATL  624A  BOS  845A  B     0    767           FN YN BN MN QN
+DL 202  ATL  636A  BOS 1004A  B     1    72S           F@ Y@ B@ M@ Q@
+DL 314  ATL  625A  DCA  755A  B     0    757           FN YN BN MN QN
+UA 717  ATL  640A  DEN  804A  B     0    737            F  Y  B  M  Q
+DL1055  ATL  652P  DEN 1130P  D     2    M80           F@ Y@ B@ M@ Q@
+AA 837  ATL  725A  DFW  835A  B     0    72S           FN YN  B  H  M
+DL 409  ATL  820A  DFW 1108A  #     2    M80            F  Y  B  M  Q
+NW 492  ATL  640A  DTW  829A  B     0    DC9           FN YN BN  M  H
+NW 823  ATL  820A  HOU 1057A  S     1    D9S            F  Y  B  M  H
+DL  30  ATL 1230P  JFK  238P  L     0    L15            F  C  Y  B  M
+HP  44  ATL  815A  LAX 1125A  B     1    320            F  Y  B  H  K
+DL 339  ATL  632A  MIA  810A  B     0    757           FN YN BN MN QN
+NW 673  ATL  710A  MSP  843A  B     0    DC9           FN YN BN  M  H
+DL 793  ATL  819A  MSY  850A  #     0    763            F  Y  B  M  Q
+DL 596  ATL  626A  ORD  715A  B     0    72S           FN YN BN MN QN
+UA 944  ATL  359P  ORD  815P  #     2    733            F  Y  B  M  Q
+DL 202  ATL  636A  PHL  825A  B     0    72S           FN YN BN MN QN
+CO 543  ATL  730A  PHX 1100A  B     1    72S            Y  Q  H  K  B
+DL 444  ATL  819A  PHX  110P  SL    3    72S            Y  B  M  Q  H
+US1238  ATL  715A  PVD 1057A  B     1    73S           FN YN BN HN QN
+DL 806  ATL  630A  RDU  740A  #     0    72S           FN YN BN MN QN
+DL 835  ATL  926A  SEA 1130A  B     0    L10            F  Y  B  M  Q
+AA 673  ATL  757P  SEA 1207A  #     1    S80            F  Y  H  B  M
+DL 270  ATL  841A  SFO 1045A  B     0    767            F  Y  B  M  Q
+DL 143  ATL 1035P  SFO  159A  S     1    757           FN YN BN MN QN
+TW  73  ATL  742A  STL  827A  B     0    D9S            F  Y  B  Q  M
+DL 273  ATL  659A  TPA  815A  #     0    763           FN YN BN MN QN
+DL 885  BNA  535A  ATL  732A  #     0    D9S           FN YN BN MN QN
+AA 132  BNA  830A  BOS 1147A  B     0    S80            F  Y  B  H  M
+AA 350  BNA  910A  DCA 1146A        0    757            F  Y  B  H  M
+AA1615  BNA 1000A  DEN 1145A  S     0    S80            F  Y  B  H  M
+AA1621  BNA  844P  DFW 1037P        0    72S            F  Y  B  M  H
+WN 436  BNA  730A  DTW 1115A        1    73S            Y  K  L  B  Q
+WN 443  BNA  725A  HOU 1045A        2    733            Y  K  L  B  Q
+TW 792  BNA 1221P  JFK  450P  S     1    72S            F  Y  B  Q  M
+WN 440  BNA  840A  LAX 1200N        1    733            Y  K  L  B  Q
+AA1651  BNA  840A  MIA 1148A  B     0    72S            F  Y  B  H  M
+NW1051  BNA  835A  MSP 1049A  #     0    D9S            F  Y  B  M  H
+WN 443  BNA  725A  MSY  925A        1    733            Y  K  L  B  Q
+AA 811  BNA  643A  ORD  821A  V     0    100           FN YN  B  M  H
+US 138  BNA  630A  PHL  915A  B     0    D9S           FN YN BN HN QN
+WN 440  BNA  840A  PHX 1120A        0    733            Y  K  L  B  Q
+NW1444  BNA 1015A  PVD  309P  S     1    D9S            F  Y  B  M  H
+AA1128  BNA  830A  RDU 1053A  B     0    S80            F  Y  B  M  H
+DL1709  BNA  405P  SEA  900P  SD    1    757            F  Y  B  M  Q
+AA1287  BNA  310P  SFO  559P  D     0    S80            F  Y  B  H  M
+TW 628  BNA  700A  STL  810A  #     0    D9S            F  Y  B  Q  M
+AA1643  BNA  840A  TPA 1122A  B     0    72S            F  Y  B  M  H
+US 599  BOS  310P  ABQ  751P  SD    1    733            F  Y  B  H  Q
+NW1863  BOS  100P  ATL  500P  L     1    D9S            F  Y  B  M  H
+AA1125  BOS  705A  BNA  905A  B     0    S80            F  Y  B  M  H
+AA1691  BOS 1240P  BNA  236P  L     0    S80            F  Y  B  M  H
+US1141  BOS  140P  BNA  446P  S     1    D9S            F  Y  B  H  Q
+NW1807  BOS  700A  DCA  834A  B     0    D9S           FN YN BN  M  H
+TW 391  BOS  920A  DCA 1230P        1    M80            F  Y  B  Q  M
+AA 379  BOS  615A  DEN 1037A  BR    1    757            F  Y  B  H  M
+UA 661  BOS  810A  DEN 1054A  B     0    757            F  Y  B  M  Q
+UA 699  BOS  225P  DEN  755P  D     2    733            F  Y  B  M  Q
+AA 333  BOS  644A  DFW  959A  B     0    D10            F  Y  B  H  M
+NW 575  BOS  625A  DTW  835A  B     0    757           FN YN BN  M  H
+TW  15  BOS  617A  JFK  725A        0    L10            F  C  Y  B  Q
+TW 223  BOS  600A  LAX  130P  B     2    M80            F  Y  B  Q  M
+CO 459  BOS  640A  LAX 1135A  #     1    733            A  Y  Q  H  K
+UA 133  BOS  535P  LAX  904P  D     0    767            F  Y  B  M  Q
+AA1245  BOS  700A  MIA 1016A  R     0    AB3            F  Y  B  H  M
+US1588  BOS  500P  MIA 1000P  D     1    734            F  Y  B  H  Q
+NW 193  BOS  635A  MSP  850A  B     0    320           FN YN BN  M  H
+NW 985  BOS  430P  MSP  825P  D     1    72S            F  Y  B  M  H
+US 233  BOS  700A  MSY 1122A  SB    1    73S            F  Y  B  M
+CO 393  BOS  330P  ORD  714P  D     1    72S            A  Y  Q  H  K
+UA 243  BOS  340P  ORD  515P  S     0    D10            F  Y  B  M  Q
+US1723  BOS  620A  PHL  741A  S     0    734            F  Y  B  H  Q
+HP  82  BOS  735A  PHX 1129A  B     0    757            F  Y  B  H  K
+AA1691  BOS 1240P  PHX  602P  LD    1    S80            F  Y  B  H  M
+AA 563  BOS  704A  RDU  916A  B     0    D10            F  Y  B  H  M
+NW 575  BOS  625A  SEA 1126A  B     1    757            F  Y  B  M  H
+DL1283  BOS  815A  SEA  335P  BL    2    757            F  Y  B  M  Q
+TW 223  BOS  600A  SFO 1139A  B     1    M80            F  Y  B  Q  M
+US 890  BOS  900A  SFO  513P  BL    3    733            F  Y  B  M
+TW 223  BOS  600A  STL  822A  B     0    M80            F  Y  B  Q  M
+DL 175  BOS  800A  TPA 1208P  B     1    72S            F  Y  B  M  Q
+NW 486  BOS  525P  TPA 1128P  #     1    72S            F  Y  B  M  H
+DL 527  DCA  850A  ABQ 1230P  BL    1    757            F  Y  B  M  Q
+DL 989  DCA  730A  ATL  915A  B     0    M80            F  Y  B  M  Q
+AA 839  DCA  808A  BNA  910A  B     0    S80            F  Y  B  H  M
+DL 528  DCA  650A  BOS  809A  B     0    M80           FN YN BN MN QN
+DL1862  DCA  755P  BOS  915P  S     0    72S            F  Y  B  M  Q
+NW1838  DCA  800P  BOS  924P  S     0    D9S            F  Y  B  M  H
+US 442  DCA  800P  BOS  927P  S     0    733           FN YN BN HN QN
+NW 563  DCA  910A  DEN 1245P  BS    1    M80            F  Y  B  M  H
+DL 527  DCA  850A  DFW 1052A  B     0    757            F  Y  B  M  Q
+US1665  DCA 1050A  DFW  300P  L     1    M80            F  Y  B  H  Q
+NW 285  DCA  650A  DTW  826A  B     0    320           FN YN BN  M  H
+AA1679  DCA  159P  HOU  631P  S     1    S80            F  Y  B  M  H
+TW 744  DCA  221P  JFK  331P        0    M80            F  C  Y  B  Q
+CO 131  DCA  645A  LAX  144P  BL    2    M80            A  Y  Q  H  K
+US 485  DCA  700A  LAX 1101A  B     1    733            F  Y  B  H  Q
+US 809  DCA  715A  MIA 1201P  SB    2    734            F  Y  B  H  Q
+PA2441  DCA  630P  MIA  905P  D     0    72S            F  Y  B  M  Q
+NW 111  DCA  700A  MSP  845A  B     0    320            F  Y  B  M  H
+DL 139  DCA 1240P  MSY  345P  L     1    757            F  Y  B  M  Q
+AA1703  DCA  900P  ORD 1010P        0    S80           FN  Y  B  M  H
+US  93  DCA  700A  PHX 1120A  B     1    733            F  Y  B  H  Q
+US1691  DCA  835A  PVD  950A  S     0    100            F  Y  B  H  Q
+US1289  DCA  650A  RDU  758A  S     0    100            F  Y  B  H  Q
+DL 523  DCA 1045A  SEA  230P  L     1    72S            F  Y  B  M  Q
+AA 273  DCA  643A  SFO 1140A  BR    1    757            F  Y  B  H  M
+US1157  DCA  435P  SFO 1113P  #     2    733            F  Y  B  H  Q
+US 127  DCA 1150A  STL  226P  #     1    100            Y  B  H  Q  M
+TW  99  DCA 1210P  STL  137P  L     0    M80            F  C  Y  B  Q
+US 291  DCA  830A  TPA 1045A  B     0    M80            F  Y  B  H  Q
+UA 691  DEN  835A  ABQ  949A  S     0    72S            F  Y  B  M  Q
+YV 236  DEN  840A  ABQ 1030A        1    BE1            Y  Q  L  H  M
+DL 402  DEN  745A  ATL 1226P  B     0    757            F  Y  B  M  Q
+AA1260  DEN  935A  BNA  109P  R     0    S80            F  Y  B  H  M
+DL1278  DEN  615A  BOS  210P  B     1    M80           F@ Y@ B@ M@ Q@
+CO1182  DEN  729P  BOS  123A  D     0    733            A  Y  Q  H  K
+DL 402  DEN  745A  DCA  259P  BL    1    757            F  Y  B  M  Q
+AA 820  DEN  435A  DFW  728A        0    S80           FN YN  B  Q  M
+NW1224  DEN  810A  DTW 1251P  B     0    D9S            F  Y  B  M  H
+YX 522  DEN  940A  DTW  340P  BS    1    DC9            Y  H  M  B  K
+UA 514  DEN 1044A  HOU  207P  L     0    737            F  Y  B  M  Q
+TW 870  DEN  948A  JFK  325P  L     0    M80            F  Y  B  Q  M
+CO1629  DEN  600P  LAX  724P  D     0    AB3            A  Y  Q  H  K
+HP  38  DEN  603P  LAX  830P  S     1    733            Y  B  H  K  Q
+UA 230  DEN  921A  MIA  604P  LS    1    733            F
+UA 986  DEN  700A  MSP  945A  B     0    737            F  Y  B  M  Q
+UA 956  DEN 1033A  MSY  212P  L     0    735            F  Y  B  M  H
+AA1012  DEN  619A  ORD  945A  B     0    S80            F  Y  B  H  M
+NW 566  DEN  505P  ORD  947P  S     1    72S            F  Y  B  M  H
+CO1602  DEN 1040A  PHL  416P  L     0    M80            A  Y  Q  H  K
+HP 844  DEN  645A  PHX  842A        0    733            Y  B  H  K  Q
+AA1362  DEN  330P  PVD 1058P  #     1    S80            F  Y  H  B  M
+DL1136  DEN  245P  RDU 1010P  D     1    72S            F  Y  B  M  Q
+HP 840  DEN  655P  SEA 1158P  S     1    73S            Y  B  H  K  Q
+CO 255  DEN  828P  SEA 1014P        0    M80            F  A  Y  Q  H
+UA 681  DEN  640A  SFO  820A  B     0    733            F  Y  B  M  Q
+HP 603  DEN  105P  SFO  440P        1    733            Y  B  H  K  Q
+TW 402  DEN  700A  STL 1000A  B     0    72S            F  Y  B  Q  M
+CO1568  DEN 1035A  TPA  519P  L     1    733            A  Y  Q  H  K
+DL 317  DEN 1100A  TPA  620P  LS    1    757            F  Y  B
+DL 581  DFW  812A  ABQ  905A  #     0    M80            F  Y  B  M  Q
+YV  81  DFW 1030A  ABQ  120P        2    BE1            Y  Q  L  H  M
+DL 333  DFW 1028P  ABQ 1110P        0    72S           FN YN BN MN QN
+DL  16  DFW  615A  ATL  918A  B     0    L15            F  Y  B  M  Q
+DL 500  DFW  615A  ATL 1055A  #     2    M80            F  Y  B  M  H
+DL 353  DFW  809A  ATL 1237P  #     1    M80            F  Y  B  M  Q
+AA1144  DFW  645A  BNA  826A  B     0    S80            F  Y  B  M  H
+AA 410  DFW  814A  BNA 1245P        2    727            F  Y  M  B  H
+DL 996  DFW  610A  BOS 1146A  B     1    72S            F  Y  B  M  Q
+AA 728  DFW  635A  BOS 1058A  B     0    S80            F  Y  B  H  M
+AA 568  DFW  656A  DCA 1033A  B     0    S80            F  Y  B  H  M
+US 349  DFW  925A  DCA  255P  B     1    M80            F  Y  B  H  Q
+UA1483  DFW  700A  DEN  802A  B     0    733            F  Y  B  M  Q
+DL 262  DFW  116P  DTW  455P  L     0    M80            F  Y  B  M  Q
+UA 446  DFW  206P  DTW  708P  #     1    72S            F  Y  B  M  Q
+DL1177  DFW  617A  HOU  715A  S     0    D9S           FN YN BN MN QN
+TW 130  DFW 1100A  JFK  450P  L     1    72S            F  Y  B  Q  M
+AA1165  DFW  700A  LAX  811A  R     0    S80            F  Y  B  H  M
+DL 859  DFW  812A  LAX 1019A  BS    1    72S            F  Y  B  M  Q
+DL1700  DFW  640A  MIA 1010A  B     0    72S            F  Y  B  M  Q
+NW 516  DFW  630A  MSP  836A  B     0    D9S            F  Y  B  M  H
+DL 824  DFW  617A  MSY  735A  #     0    M80           FN YN BN MN QN
+AA 580  DFW  700A  ORD  915A  B     0    757            F  Y  B  M  H
+DL 335  DFW  106P  ORD  750P  SD    3    72S            F  Y  B  M  Q
+AA 124  DFW  657A  PHL 1049A  B     0    S80            F  Y  B  H  M
+AA 360  DFW  925A  PHL  303P  VL    1    S80            F  Y  M  H  B
+HP 622  DFW  705A  PHX  836A  S     0    73S            Y  B  H  K  Q
+UA1098  DFW  145P  PVD  722P  LS    1    733            F  Y  B  M  Q
+AA1254  DFW  814A  RDU 1149A  B     0    72S            F  Y  B  M  H
+DL1717  DFW  808A  SEA 1120A  B     1    72S            F  Y  B  M  Q
+AA 583  DFW  953P  SEA 1208A        0    S80           FN YN  B  H  M
+AA 203  DFW  810A  SFO  947A  B     0    757            F  Y  B  H  M
+TW 563  DFW  641A  STL  827A  B     0    D9S            F  Y  B  Q  M
+AD1274  DFW  225P  STL  610P        3    SWM            Y  K  Q  V  H
+AA1378  DFW  658A  TPA 1009A  B     0    72S            F  Y  B  M  H
+DL 790  DFW  940A  TPA  305P  S     1    763            F  Y  B  M  Q
+AA 305  DTW  105P  ABQ  446P  #     1    72S            F  Y  H  B  M
+DL 201  DTW  550A  ATL  737A  B     0    72S           FN YN BN MN QN
+NW1565  DTW  720A  BNA  800A  S     0    D9S           FN YN BN  M  H
+US 852  DTW  700A  BOS 1017A  BS    1    D9S           FN YN BN HN QN
+NW 338  DTW  720A  DCA  846A  B     0    757           FN YN BN  M  H
+UA 307  DTW  657A  DEN  810A  B     0    733            F  Y  B  M  Q
+AA1543  DTW  730P  DEN 1034P  S     1    S80            F  Y  H  B  M
+AA1433  DTW  655A  DFW  836A  B     0    S80            F  Y  B  M  H
+NW 697  DTW  940P  DFW 1142P        0    D9S            F  Y  B  M  H
+WN 531  DTW  700A  HOU 1040A        2    733            Y  K  L  B  Q
+TW 766  DTW  300P  JFK  449P        0    72S            F  Y  B  Q  M
+NW 333  DTW  925A  LAX 1130A  B     0    D10            F  Y  B  M  H
+PA 437  DTW  715A  MIA 1016A  B     0    72S            F  Y  B  M  Q
+NW 123  DTW  700A  MSP  920A  S     1    320            F  Y  B  M  H
+NW 757  DTW 1000P  MSP 1052P        0    D10           FN YN BN  M  H
+NW 297  DTW  650P  MSY  947P  D     1    72S            F  Y  B  M  H
+NW 123  DTW  700A  ORD  714A  S     0    320            F  Y  B  M  H
+US 100  DTW  700A  PHL  828A  B     0    73S           FN YN BN HN QN
+NW 101  DTW  730A  PHX 1156A  SB    1    D10            F  Y  B  M  H
+NW1440  DTW  715A  PVD  854A  S     0    D9S            F  Y  B  M  H
+US 100  DTW  700A  RDU 1028A  BS    1    73S           FN YN BN HN QN
+NW 575  DTW  925A  SEA 1126A  B     0    757            F  Y  B  M  H
+NW 349  DTW  945P  SFO 1151P  S     0    757           FN YN BN  M  H
+WN 531  DTW  700A  STL  830A        1    733            Y  K  L  B  Q
+TW 169  DTW  735A  STL  812A  B     0    72S            F  Y  B  Q  M
+NW 484  DTW  800A  TPA 1037A  B     0    72S           FN YN BN  M  H
+WN 592  HOU  650A  ABQ  750A        0    733            Y  K  L  B  Q
+WN 866  HOU  910A  ABQ 1130A        2    733            Y  K  L  B  Q
+DL 408  HOU  940A  ATL 1235P  S     0    M80            Y  B  M  Q  H
+WN 214  HOU  755A  BNA  940A        0    733            Y  K  L  B  Q
+UA 317  HOU  639A  DEN  810A  B     0    737            F  Y  B  M  Q
+AA1412  HOU  615A  DFW  718A  #     0    S80            F  Y  B  H  M
+WN 682  HOU  825A  DTW  235P        3    73S            Y  K  L  B  Q
+TW 130  HOU 1230P  JFK  450P  L     0    72S            F  Y  B  Q  M
+WN 631  HOU  740A  LAX 1015A        2    73S            Y  K  L  B  Q
+WN 659  HOU  305P  LAX  510P        1    735            Y  K  L  B  Q
+AA1047  HOU  700A  MIA 1030A  B     0    72S            F  Y  B  H  M
+NW1029  HOU  800A  MSP 1042A  B     0    D9S            F  Y  B  M  H
+WN 475  HOU  630A  MSY  730A        0    735            Y  K  L  B  Q
+4X 216  HOU  230P  MSY  610P        3    BEC            Y  B  Q
+4X 375  HOU  620P  MSY  815P        1    BEC            Y  B  Q  M
+UA1242  HOU  800A  ORD 1024A  B     0    73S            F  Y  B  M  Q
+DL 690  HOU  450P  ORD  914P  D     1    D9S            F  Y  B  M  Q
+TW 344  HOU  754A  PHL  151P  BS    1    72S            F  Y  B  Q  M
+WN 760  HOU  600A  PHX  915A        3    735            Y  K  L  B  Q
+WN 421  HOU 1215P  PHX  200P        0    73S            Y  K  L  B  Q
+TW 598  HOU 1030A  RDU  406P  #     1    D9S            F  Y  Q  V  K
+WN 592  HOU  650A  SFO  950A        1    733            Y  K  L  B  Q
+WN 761  HOU  650A  STL  845A        0    735            Y  K  L  B  Q
+TW 845  JFK  335P  ABQ  825P  SD    1    L10            F  C  Y  B  Q
+DL1917  JFK  455P  ATL  716P  D     0    310            F  C  Y  B  M
+TW 717  JFK  420P  BNA  707P  S     1    M80            F  Y  B  Q  M
+TW  44  JFK  650A  BOS  754A        0    L10            F  C  Y  B  Q
+TW 391  JFK 1114A  DCA 1230P        0    M80            F  Y  B  Q  M
+TW 743  JFK  550P  DEN  839P  D     0    M80            F  Y  B  Q  M
+DL1871  JFK  545P  DFW  843P  D     0    72S            F  Y  B  M  Q
+TW 817  JFK  559P  DTW  809P  D     0    72S            F  Y  B  Q  M
+TW 805  JFK  615P  HOU  929P  D     0    72S            Y  B  Q  M  V
+UA   7  JFK  800A  LAX 1049A  BS    0    D10            F  Y  B  M  Q
+TW  15  JFK  855A  LAX 1149A  B     0    L10            F  C  Y  B  Q
+PA 403  JFK  715A  MIA 1020A  B     0    72S            F  Y  B  M  Q
+TW 401  JFK  625P  MSP 1004P  D     1    72S            F  Y  B  Q  M
+TW 881  JFK  550P  MSY  822P  D     0    72S            F  Y  B  Q  M
+UA 903  JFK  725P  ORD  903P  D     0    727            F  C  Y  B  M
+TW  97  JFK  214P  PHL  304P        0    767            F  C  Y  B  Q
+HP 705  JFK  505A  PHX  842A  B     0    320           FN YN BN  H KN
+HP 711  JFK  855P  PHX  230A  S     1    757           FN YN BN  H KN
+AA1161  JFK  740A  RDU  921A  B     0    72S            F  Y  B  M  H
+UA  37  JFK  900A  SEA 1209P  BS    0    767            Y  B  M  Q  H
+AA  59  JFK  800A  SFO 1133A  R     0    767            F  Y  B  H  M
+TW 203  JFK  627A  STL  817A  B     0    M80            F  Y  B  Q  M
+TW  25  JFK 1105A  STL  217P  #     1    72S            F  Y  B  Q  M
+TW 305  JFK  550P  TPA  852P  D     0    72S            F  Y  B  Q  M
+WN 535  LAX  810A  ABQ 1055A        0    73S            Y  K  L  B  Q
+DL 182  LAX 1205A  ATL  709A  S     0    763           FN YN BN MN QN
+HP3008  LAX 1205P  ATL  841P  L     1    320            F  Y  B  H  K
+AA 350  LAX  150A  BNA  749A  S     0    757           FN YN  B  M  H
+WN 520  LAX  200P  BNA  850P        1    733            Y  K  L  B  Q
+DL 996  LAX 1230A  BOS 1146A  B     2    72S            F  Y  B  M  Q
+NW 932  LAX  215A  BOS 1215P  S     1    320            F  Y  B  M  H
+UA 890  LAX  210P  BOS 1029P  L     0    767            F  C  Y  B  M
+AA 350  LAX  150A  DCA 1146A  S     1    757           FN YN  B  H  Q
+CO1218  LAX  620A  DEN  943A  B     0    AB3            A  Y  Q  H  K
+DL 996  LAX 1230A  DFW  514A        0    72S            F  Y  B  M  Q
+DL1442  LAX  340P  DFW  946P  D     1    733            F  Y  B  M  Q
+NW 330  LAX  710A  DTW  228P  B     0    320           FN YN BN  M  H
+WN 123  LAX  530A  HOU 1135A        1    73S            Y  K  L  B  Q
+WN 845  LAX  735A  HOU  200P        2    73S            Y  K  L  B  Q
+TW 840  LAX  800A  JFK  414P  B     0    747            F  C  Y  B  Q
+AA 400  LAX  730A  MIA  330P  R     0    757            Y  B  H  M  Q
+NW 300  LAX  130A  MSP  655A  S     0    D10           FN YN BN  M  H
+WN 123  LAX  530A  MSY 1255P        2    73S            Y  K  L  B  Q
+CO 230  LAX  715A  MSY  227P  B     1    AB3            A  Y  Q  H  K
+DL 170  LAX 1215P  MSY  553P  L     0    72S            F  Y  B  M  Q
+AA1456  LAX  630A  ORD 1220P  #     0    D10            F  Y  B  H  M
+AA1502  LAX  825A  ORD  434P  #     1    D10            F  Y  B  H  M
+UA 242  LAX  505P  ORD 1157P  #     1    72S            F  Y  B  M  Q
+UA 202  LAX  600P  ORD 1144P  D     0    757            F  Y  B  M  Q
+UA 118  LAX 1130P  ORD  508A  #     0    D10           FN YN  B  M  Q
+CO1502  LAX 1005A  PHL  734P  #     1    733            Y  Q  H  K  B
+DL 252  LAX  135P  PHL 1245A  DS    2    757           F@ Y@ B@ M@ Q@
+UA  98  LAX 1045P  PHL  632A  S     0    757           FN YN  B  M  Q
+WN 252  LAX  855P  PHX 1100P        0    733            Y  K  L  B  Q
+WN 305  LAX  945P  PHX 1155P        0    73S            Y  K  L  B  Q
+DL1612  LAX  959P  PHX 1219A        0    72S           FN YN BN MN QN
+WN 300  LAX 1010P  PHX 1215A        0    73S            Y  K  L  B  Q
+WN 306  LAX 1030P  PHX 1250A        0    733            Y  K  L  B  Q
+DL1719  LAX  610A  SEA  841A  B     0    757            F  Y  B  M  Q
+UA1716  LAX  330P  SEA  732P  SD    1    73S            F  Y  B  M  Q
+DL 143  LAX 1250A  SFO  159A        0    757           FN YN BN MN QN
+DL 644  LAX  600A  SFO  706A  S     0    73S            F  Y  B  M  Q
+US1014  LAX  600P  SFO  716P  S     0    733            F  Y  B  H  Q
+UA1722  LAX  630P  SFO  752P  S     0    737            F  Y  B  M  Q
+US 187  LAX  700P  SFO  816P  S     0    734            F  Y  B  H  Q
+TW  72  LAX 1250A  STL  610A  S     0    L10           FN CN YN  B  Q
+DL1434  LAX  835A  STL  412P  SL    1    72S            F  Y  B  M  Q
+WN 504  LAX 1255P  STL  815P        2    73S            Y  K  L  B  Q
+DL 808  LAX  800A  TPA  337P  B     0    757            F  Y  B
+DL 170  LAX 1215P  TPA  843P  LS    1    72S            F  Y  B  M  Q
+CO1707  MIA  745A  ABQ  123P  B     2    733            Y  Q  H  K  B
+DL 167  MIA  600A  ATL  741A  B     0    L10           FN YN BN MN QN
+DL 574  MIA  910P  ATL 1051P        0    72S           FN YN BN MN QN
+AA1638  MIA  739A  BNA  858A  B     0    72S            F  Y  B  H  M
+US1586  MIA  700A  BOS 1123A  #     1    M80            F  Y  B  H  Q
+AA1576  MIA  755A  BOS 1111A  R     0    72S            F  Y  B  H  M
+PA2440  MIA  735A  DCA 1000A  #     0    72S            F  Y  B  M  Q
+US1971  MIA  135P  DCA  618P  S     2    734            F  Y  B  H  Q
+UA 255  MIA  725A  DEN 1101A  B     1    72S            F  Y  B  M  Q
+AA 910  MIA  655P  DFW  901P  D     0    757            Y  B  H  M  Q
+AA1080  MIA  659P  DFW 1036P  D     1    72S            F  Y  H  B  M
+US1264  MIA  820A  DTW 1250P  BS    1    733            F  Y  B  H  Q
+NW 998  MIA  610P  DTW  910P  D     0    72S           FN YN BN
+AA1080  MIA  659P  HOU  854P  D     0    72S            F  Y  B  H  M
+AA 926  MIA  703P  HOU 1215A  D     2    72S            F  Y  H  B  M
+AA 424  MIA  700P  JFK  951P  D     0    AB3            F  Y  H  B  M
+AA1449  MIA  800A  LAX 1046A  R     0    757            Y  B  H  M  Q
+US 199  MIA  815A  LAX 1251P  #     1    733            F  Y  B  H  Q
+DL 739  MIA  630A  MSY  855A  #     1    72S            F  Y  B  M  Q
+UA 395  MIA  700A  ORD  901A  B     0    72S            F  Y  B  M  H
+NW 941  MIA 1255P  ORD  437P  S     1    D9S            F  Y  B  M  H
+US 660  MIA  630A  PHL  909A  B     0    M80            F  Y  B  H  Q
+DL1120  MIA  540P  PHL  927P  D     1    72S            F  Y  B  M  Q
+AA1441  MIA 1255P  PHX  517P  LS    1    D10            F  Y  H  B  M
+US1550  MIA  700A  PVD 1121A  B     1    734            F  Y  B  H  Q
+AA1382  MIA  610A  RDU  819A  B     0    72S            F  Y  B  M  H
+AA  27  MIA  800A  SEA 1127A  R     0    757            F  Y  H  B  M
+UA 379  MIA  710A  SFO 1027A  BS    0    757            Y  B  M  Q  H
+PA 442  MIA  130P  SFO  640P  L     1    AB3            F  Y  B  M  Q
+TW 245  MIA  720A  STL 1118A  B     2    M80            F  Y  B  M
+TW 633  MIA  918A  STL 1112A  B     0    M80            F  Y  B  Q  V
+US1586  MIA  700A  TPA  756A  #     0    M80            F  Y  B  H  Q
+TW 245  MIA  720A  TPA  917A        1    M80            F  Y  B  M
+DL 939  MSP  600A  ATL  922A  B     0    73S           FN YN BN MN QN
+DL1856  MSP  115P  ATL  559P  LS    1    72S            F  Y  B  M  Q
+DL1239  MSP  300P  ATL  852P        2    73S            F  Y  B  M  Q
+TW 552  MSP 1107A  BNA  250P  S     1    D9S            F  K
+NW 720  MSP  750A  BOS 1122A  B     0    757            F  Y  B  M  H
+NW 356  MSP  845P  BOS 1212A        0    757           FN YN BN  M  H
+NW 312  MSP  700A  DCA 1013A  B     0    D9S           FN YN BN  M  H
+UA 389  MSP  650A  DEN  757A  B     0    733            F  Y  B  M  Q
+AA 313  MSP  625P  DEN 1049P  D     1    S80            F  Y  B  H  M
+UA 403  MSP  645P  DEN  746P  D     0    737            F  Y  B  M  Q
+TW 525  MSP  653A  DFW 1123A  #     1    D9S            F  Y  B  Q  M
+AA 189  MSP  735A  DFW  952A  B     0    S80            F  Y  B  M  H
+NW 740  MSP  600A  DTW  838A  B     0    320           FN YN BN  M  H
+TW 639  MSP  349P  HOU  846P  D     1    D9S            F  Y  B  Q  M
+TW 202  MSP 1137A  JFK  450P  #     1    72S            F  Y  B  Q  M
+NW 933  MSP  930A  LAX 1120A  B     0    D10            Y  B  M
+NW 570  MSP  755A  MIA 1230P  B     0    72S            F  Y  B  M
+NW 453  MSP 1200N  MSY  405P  S     1    72S            F  Y  B  M  H
+ZK  38  MSP  420P  ORD  705P        2    BE1            Y  M  H  Q  V
+UA  86  MSP  500P  ORD  612P  S     0    72S            F  Y  B  M  Q
+NW 140  MSP  500P  ORD  615P  S     0    D9S            F  Y  B  M  H
+NW 680  MSP  740A  PHL 1101A  B     0    D9S            F  Y  B  M  H
+NW  99  MSP  745A  PHX 1006A  B     0    72S            F  Y  B  M  H
+DL1855  MSP  655P  PHX 1050P  D     1    72S           F@ Y@ B@ M@ Q@
+CO 834  MSP  300P  PVD  807P        1    737            A  Y  Q  H  K
+NW   7  MSP  925A  SEA 1100A  B     0    747            F  C  Y  B  M
+HP 606  MSP  845A  SFO  107P  BS    1    320            F  Y  B  H  K
+NW 361  MSP 1030P  SFO 1227A  S     0    757            F  Y  B  M  H
+NW 597  MSP  610P  STL  741P  S     0    D9S            F  Y  B  M  H
+NW 599  MSP  900P  STL 1025P        0    DC9            F  Y  B  M  H
+NW 478  MSP  750A  TPA 1158A  B     0    72S            F  Y  B  M  H
+CO1707  MSY  920A  ABQ  123P  #     1    733            Y  Q  H  K  B
+WN  30  MSY 1210P  ABQ  355P        3    73S            Y  K  L  B  Q
+DL1229  MSY  845P  ATL 1059P        0    73S            F  Y  B  M  Q
+AA1424  MSY  630A  BNA  755A  #     0    S80            F  Y  B  H  M
+WN 103  MSY  955A  BNA 1155A        1    733            Y  K  L  B  Q
+CO 546  MSY  830A  BOS  241P  B     1    72S            A  Y  Q  H  K
+CO1639  MSY  730A  DEN 1114A  S     1    AB3            A  Y  Q  H  K
+CO 119  MSY  330P  DEN  525P  S     0    733            A  Y  Q  H  K
+DL 651  MSY  600A  DFW  731A  #     0    757            F  Y  B  M  Q
+AA 382  MSY  700A  DTW  107P  #     1    S80            F  Y  M  B  H
+WN 304  MSY  840A  DTW  425P        4    733            Y  K  L  B  Q
+4X 370  MSY  615A  HOU  810A        1    BEC            Y  B  Q  M
+4X 201  MSY  835A  HOU 1220P        2    BEC            Y
+WN 843  MSY 1115A  HOU 1215P        0    73S            Y  K  L  B  Q
+WN 758  MSY  935P  HOU 1035P        0    73S            Y  K  L  B  Q
+TW 880  MSY 1214P  JFK  404P  #     0    72S            F  Y  B  Q  M
+UA1477  MSY  814A  LAX 1017A  B     0    72S            F  Y  B  M  Q
+WN 453  MSY  715P  LAX 1045P        2    73S            Y  K  L  B  Q
+AA 485  MSY  720A  MIA  959A  B     0    72S            F  Y  B  M  H
+NW 397  MSY  635A  MSP 1031A  #     1    72S            F  Y  B  M  H
+AA 174  MSY  731A  ORD  945A  B     0    S80            F  Y  B  M  H
+DL 864  MSY  635A  PHL 1150A  B     1    72S            F  Y  B  M  Q
+WN 453  MSY  715P  PHX 1015P        1    73S            Y  K  L  B  Q
+NW1476  MSY 1215P  PVD  616P  S     1    D9S            F  Y  B  M  H
+TW 608  MSY  536P  RDU 1114P  D     1    D9S            F  Y  B  Q  M
+UA 363  MSY  734A  SFO 1029A  S     0    733            Y  B  M  Q  H
+CO 485  MSY  330P  SFO  756P  D     1    AB3            A  Y  Q  H  K
+NW 862  MSY  730A  STL 1047A  S     1    D9S            F  Y  B  M  H
+TW 556  MSY  804A  STL  950A  B     0    D9S            F  Y  B  Q  M
+CO1568  MSY  250P  TPA  519P        0    733            F  A  Y  Q  H
+AA 359  ORD  905A  ABQ 1102A  R     0    S80            F  Y  B  H  M
+DL 401  ORD  600A  ATL 1108A  #     2    72S           F@ Y@ B@ M@ Q@
+DL 579  ORD  620A  ATL  903A  B     0    72S            F  Y  B  M  Q
+AA1488  ORD  630A  BNA  757A  V     0    S80           FN YN  B  H  M
+AA1401  ORD  733A  BNA  907A  V     0    100            F  Y  B  H  M
+UA 284  ORD  600A  BOS  912A  B     0    757            F  Y  B  M  Q
+CO 390  ORD  915A  BOS  211P  S     1    M80            A  Y  Q  H  K
+UA 600  ORD  620A  DCA  900A  B     0    72S            F  Y  B  M  Q
+CO 482  ORD  544P  DCA 1029P        1    M80            Y  Q  H  K  B
+UA 293  ORD  612A  DEN  743A  B     0    D10            F  Y  B  M  Q
+ZK 402  ORD  705A  DEN 1055A        3    BE1            Y  M  H  Q  V
+UA 229  ORD 1000P  DEN 1136P  #     0    733            F  Y  B  M  Q
+AA 348  ORD  615A  DFW  836A  B     0    S80            F  Y  B  M  H
+CO 642  ORD 1010A  DFW  251P  S     1    72S            A  Y  Q  H  K
+AA 153  ORD  930P  DFW 1149P        0    S80           FN YN  B  M  H
+NW 161  ORD  610A  DTW  823A  S     0    DC9            F  Y  B  M  H
+AA 212  ORD  830P  DTW 1040P        0    D10            F  Y  B  M  V
+DL 877  ORD  830A  HOU 1255P  B     1    D9S            F  Y  B  M  Q
+UA 150  ORD  314P  JFK  622P  S     0    727            F  Y  B  M  Q
+UA 635  ORD  700A  LAX  914A  B     0    72S            F  Y  B  M  Q
+UA  39  ORD  815A  LAX 1032A  B     0    D10            F  Y  B  M  Q
+AA 281  ORD 1115A  LAX  337P  LS    1    D10            F  Y  B  Q  M
+DL 819  ORD 1155A  LAX  508P  LS    2    72S            F  Y  B  M  Q
+UA 117  ORD 1000P  LAX 1227A  S     0    757           FN YN  B  M  Q
+DL 561  ORD  530A  MIA 1045A  SB    1    72S           F@
+AA 671  ORD  630A  MIA 1025A  B     0    AB3            F  Y  B  H  M
+NW 119  ORD  600A  MSP  715A  S     0    72S           FN YN BN  M  H
+ZK  35  ORD  114P  MSP  410P        2    BE1            Y  M  H  Q  V
+UA 663  ORD  655P  MSP  825P  S     0    73S            F  Y  B  M  Q
+UA 463  ORD  745A  MSY 1002A  B     0    72S            F  Y  B  M  H
+DL1507  ORD  310P  MSY  735P  S     1    757            Y  B  M  Q  H
+UA 519  ORD  652P  MSY  916P  D     0    73S            F  Y  B  M  H
+CO 478  ORD  540A  PHL  945A  S     1    737            A  Y  Q  H  K
+UA 176  ORD  635A  PHL  928A  B     0    D10            F  Y  B  M  Q
+HP 111  ORD  315A  PHX  610A        0    733           YN BN  H KN QN
+NW 109  ORD  800P  PHX 1247A  S     1    72S           FN YN BN  M  H
+AA1362  ORD  755P  PVD 1058P  #     0    S80            F  Y  B  M  H
+AA1273  ORD  626A  RDU  921A  B     0    72S            F  Y  B  M  Q
+UA 293  ORD  612A  SEA 1027A  B     1    D10            F  Y  B  M  Q
+AA 673  ORD  930P  SEA 1207A  #     0    S80           FN  Y  B  H  M
+UA 657  ORD 1000P  SEA 1234A  S     0    733           FN YN  B  M  Q
+UA 187  ORD  812A  SFO 1045A  B     0    D10            F  Y  B  M  Q
+CO1765  ORD  615P  SFO 1010P  #     1    733            A  Y  Q  H  K
+UA1171  ORD  700A  STL  816A  S     0    72S            F  Y  B  M  Q
+UA 779  ORD  700P  STL  824P  #     0    72S            F  Y  B  M  Q
+UA 974  ORD  314P  TPA  649P  S     0    757            F  Y  B  M  Q
+AA 315  ORD  530P  TPA 1024P  SD    1    72S            F  Y  B
+UA1235  PHL  935A  ATL 1249P  L     1    72S            F  Y  B  M  Q
+US 771  PHL  950A  ATL 1207P  S     0    D9S            F  Y  B  H  Q
+AA 601  PHL  800A  BNA  910A  B     0    S80            F  Y  B  H  M
+US 404  PHL  700A  BOS  814A  S     0    733            F  Y  B  H  Q
+US1576  PHL  855P  BOS 1013P        0    73S            F  Y  B  H  Q
+AA1281  PHL  610A  DEN 1036A  B     1    S80            F  Y  B  H  Q
+UA 147  PHL  850A  DEN 1058A  B     0    D10            F  Y  B  M  Q
+AA1281  PHL  610A  DFW  833A  B     0    S80            F  Y  B  H  M
+NW1191  PHL  645A  DTW  830A  S     0    757            F  Y  B  M  H
+TW 712  PHL  236P  JFK  326P        0    72S            F  Y  B  Q  M
+UA  39  PHL  610A  LAX 1032A  B     1    D10            F  Y  B  M  Q
+US 435  PHL  710A  MIA 1006A  B     0    734            F  Y  B  H  Q
+DL 367  PHL  410P  MIA  920P  D     1    72S            F  Y  B  M  Q
+NW 777  PHL  900A  MSP 1052A  B     0    757            F  Y  B  M  H
+US 553  PHL  255P  MSY  500P  L     0    734            F  Y  B  H  Q
+AA 271  PHL  703A  ORD  815A  B     0    757            F  Y  B  M  H
+NW 205  PHL 1245P  ORD  325P  S     1    72S            F  Y  B  M  H
+US 353  PHL  830A  PHX 1156A  B     0    733            F  Y  B  H  Q
+US1238  PHL  955A  PVD 1057A        0    73S            F  Y  B  H  Q
+AA 649  PHL  805A  RDU  928A  V     0    72S            F  Y  B  H  M
+AA 391  PHL 1245P  SEA  522P  L     1    72S            F  Y  B  H  M
+UA 183  PHL  830A  SFO 1129A  BS    0    D10            F  Y  B  M  Q
+UA 189  PHL 1030A  SFO  310P  SL    1    D10            F  Y  B  M  Q
+TW 217  PHL  700A  STL  832A  B     0    72S            F  Y  B  Q  M
+NW1159  PHL 1220P  STL  347P  L     1    D9S            F  Y  B  M  H
+US 801  PHL  700A  TPA  940A  B     0    734            F  Y  B  H  Q
+AA 649  PHL  805A  TPA 1158A  V     1    72S            F  Y  B  H  Q
+WN 664  PHX  700A  ABQ  805A        0    733            Y  K  L  B  Q
+WN 938  PHX 1010P  ABQ 1115P        0    733            Y  K  L  B  Q
+WN 801  PHX 1030P  ABQ 1130P        0    73S            Y  K  L  B  Q
+DL 314  PHX 1210A  ATL  529A  S     0    757           FN YN BN MN QN
+UA 410  PHX  835A  ATL  422P  BS    1    72S            F  Y  B  M  H
+AA 162  PHX  910A  BNA  100P  R     0    S80            F  Y  H  B  M
+HP 826  PHX  910A  BOS  357P  L     0    757            F  Y  B  H  K
+NW1268  PHX 1115A  BOS  711P  LD    1    72S            F  Y  B  M  H
+DL 314  PHX 1210A  DCA  755A  SB    1    757           FN YN BN MN QN
+UA 396  PHX  800A  DEN  940A  B     0    72S            F  Y  B  M  Q
+HP 499  PHX 1200N  DEN  338P  S     1    733            Y  B  H  Q
+AA 534  PHX  235A  DFW  538A        0    72S           FN YN  B  H  M
+CO 280  PHX 1050A  DFW  407P  S     1    M80            A  Y  Q  H  K
+AA1530  PHX  705P  DFW 1016P  D     0    72S            F  Y  B  H  M
+NW 256  PHX 1240A  DTW  617A  S     0    72S           FN YN BN  M  H
+DL 588  PHX 1255P  DTW  830P  LD    1    72S            F  Y  B  M  Q
+WN 559  PHX  700A  HOU 1145A        2    73S            Y  K  L  B  Q
+WN 308  PHX  845A  HOU  100P        1    73S            Y  K  L  B  Q
+WN 611  PHX 1030A  HOU  210P        0    733            Y  K  L  B  Q
+HP 290  PHX  900A  JFK  340P  B     0    757            F  Y  B  H  K
+WN 291  PHX  630A  LAX  640A        0    733            Y  K  L  B  Q
+DL1797  PHX  850P  LAX  903P        0    72S            F  Y  B  M  Q
+WN1950  PHX  900P  LAX  925P        0    733            Y  K  L  B  Q
+WN 274  PHX  935P  LAX  950P        0    73S            Y  K  L  B  Q
+HP  35  PHX  955P  LAX 1015P        0    733            Y  B  H  K  Q
+NW 100  PHX  815A  MSP 1218P  B     0    757            F  Y  B  M  H
+HP 586  PHX  613P  MSP 1017P  S     0    733            Y  B  H  K  Q
+WN 123  PHX  755A  MSY 1255P        1    73S            Y  K  L  B  Q
+UA1276  PHX 1255A  ORD  503A  #     0    733           FN YN  B  M  Q
+HP 333  PHX  850P  ORD  118A  S     0    733           YN BN  H KN QN
+DL 648  PHX  830A  PHL  415P  B     1    72S            F  Y  B  M  Q
+US 431  PHX 1245P  PHL  700P  L     0    733            F  Y  B  H  Q
+US 431  PHX 1245P  PVD  838P  L     1    733            F  Y  B  H  Q
+HP 523  PHX  715A  SEA 1130A        2    733            Y  B  H  K  Q
+NW1233  PHX  745A  SEA 1125A  SB    1    320           FN YN BN  M  H
+AS 603  PHX  810A  SEA 1000A  B     0    72S            F  Y  B  M  H
+UA1444  PHX  710A  SFO  810A  B     0    72S            F  Y  B  M  Q
+WN 721  PHX  520P  SFO  715P        1    73S            Y  K  L  B  Q
+WN 753  PHX  715P  SFO  805P        0    73S            Y  K  L  B  Q
+TW 146  PHX  255A  STL  646A  #     0    72S           FN YN  B  Q  M
+WN 696  PHX  815A  STL  100P        1    733            Y  K  L  B  Q
+CO1002  PHX  910A  TPA  441P  BS    1    M80            A  Y  Q  H  K
+CO1619  PVD  630A  ATL 1113A  B     1    73S            F  A  Y  Q  H
+US 291  PVD  630A  DCA  752A  S     0    M80            F  Y  B  H  Q
+UA 523  PVD 1005A  DFW  255P  L     1    733            F  Y  B  M  Q
+NW1003  PVD  630A  DTW  840A  S     0    D9S            F  Y  B  M  H
+UA1545  PVD  640A  MIA 1143A  SB    1    733            F  Y  B  M  Q
+UA1185  PVD 1155A  MSY  352P  S     1    73S            F  Y  B  M  H
+AA 133  PVD  625A  ORD  753A  B     0    S80            F  Y  B  M  H
+UA1763  PVD  755P  ORD  931P  #     0    733            F  Y  B  M  Q
+US 221  PVD  655P  PHL  803P  #     0    M80            F  Y  B  H  Q
+AA1559  PVD  616P  RDU  807P  D     0    S80            F  Y  B  H  M
+US 697  PVD  730A  SEA 1232P  B     1    733            F  Y  B  H  Q
+US 430  PVD  600P  TPA 1047P  DS    1    M80            F  Y  B  H  Q
+DL1175  RDU  615A  ATL  740A  #     0    72S           FN YN BN MN QN
+US1636  RDU  815P  ATL 1054P        1    D9S            Y  B  H  Q  M
+AA1159  RDU  820A  BNA  856A  B     0    S80            F  Y  B  M  H
+US 303  RDU  115P  BNA  313P        1    D9S            Y  B  H  Q  M
+US1072  RDU  845A  BOS 1023A  B     0    100            F  Y  B  H  Q
+US1691  RDU  710A  DCA  804A  S     0    100            Y  B  H  Q  M
+AA 429  RDU  635A  DFW  829A  B     0    727            F  Y  B  H  M
+AA1373  RDU  810A  DFW 1003A  B     0    S80            F  Y  B  H  M
+AA1243  RDU  420P  DFW  851P  SD    1    72S            F  Y  H  M  Q
+AA1062  RDU  325P  DTW  514P        0    72S            F  Y  B  H  M
+DL 412  RDU  640P  DTW  955P  S     1    757            F  Y  B  M  Q
+US1100  RDU  420P  JFK  733P  D     1    73S            Y  B  H  Q  M
+AA1635  RDU  900P  MIA 1103P        0    72S           FN  Y  B  H  M
+AA1219  RDU  701A  ORD  808A  B     0    S80            F  Y  H  B  M
+US 205  RDU  625P  ORD  855P  S     1    D9S            F  Y  B  H  Q
+US 270  RDU  750A  PHL  900A  S     0    733            F  Y  B  H  Q
+US1691  RDU  710A  PVD  950A  S     1    100            Y  B  H  Q  M
+TW 505  RDU  434P  STL  554P  D     0    D9S            F  Y  B  Q  M
+DL1175  RDU  615A  TPA 1000A  #     1    72S           F@ Y@ B@ M@ Q@
+AA1005  RDU  900P  TPA 1048P        0    72S           FN  Y  B  H  M
+UA 509  SEA  800A  ABQ  134P  #     1    733            F  Y  B  M  Q
+DL 706  SEA  830A  ATL  349P  B     0    L10            F  Y  B  M  H
+AA1406  SEA  750A  BNA  423P  B     1    S80            F  Y  B  H  M
+NW  46  SEA  700A  BOS  453P  BS    1    D10            F  C  Y  B  M
+UA  56  SEA  100P  BOS 1100P  L     1    757            F  Y  B  M  Q
+TW  80  SEA  112A  DCA 1040A  SB    1    M80           FN YN  B  Q  M
+AA 266  SEA  115P  DCA 1102P  L     1    757            F  Y  B  M  H
+CO1232  SEA  620A  DEN  947A  B     0    AB3            F  A  Y  Q  H
+AA 396  SEA 1212A  DFW  545A        0    72S           FN YN  B  H  M
+DL 994  SEA  825A  DFW  340P  BL    1    757            F  Y  B  M  Q
+NW 578  SEA  845A  DTW  353P  B     0    757            F  Y  B  M  H
+TW 708  SEA  850A  JFK  450P  B     0    L10            F  C  Y  B  Q
+DL 620  SEA  650A  LAX  911A  B     0    757            F  Y  B  M  Q
+UA1915  SEA  100P  LAX  327P  L     0    735            F  Y  B  M  Q
+UA1919  SEA  230P  LAX  456P  S     0    735            F  Y  B  M  Q
+UA1247  SEA  300P  LAX  714P  S     1    735            F  Y  B  M  H
+AS 226  SEA  345P  LAX  615P  D     0    M80            F  Y  B  M  H
+DL 558  SEA 1235P  MIA 1215A  LD    2    L10            F  Y  B  M  Q
+AA  26  SEA 1255P  MIA  930P  L     0    757            F  Y  M  Q  B
+NW 158  SEA  100A  MSP  605A  S     0    757            F  Y  B  M  H
+DL 170  SEA  830A  MSY  553P  BL    1    72S            F  Y  B  M  Q
+AA 632  SEA 1201A  ORD  541A        0    S80           FN  Y  B  H  M
+NW 158  SEA  100A  ORD  814A  S     1    757            F  Y  B  M  H
+UA 156  SEA  630P  ORD 1213A  D     0    733            F  Y  B  M  Q
+AS 394  SEA  650A  PHL  405P  BL    1    72S            Y  B  H  Q  K
+AS 610  SEA  140P  PHX  525P  L     0    72S            F  Y  B  M  H
+AA 716  SEA  940A  PVD  741P  LD    1    S80            F  Y  B  M  H
+UA1065  SEA  625A  SFO  829A  B     0    733            F  Y  B  M  Q
+US 603  SEA  655P  SFO  851P  D     0    733            F  Y  B  H  Q
+UA1781  SEA  830P  SFO 1026P  #     0    73S            F  Y  B  M  Q
+TW  80  SEA  112A  STL  657A  S     0    M80           FN YN  B  Q  M
+DL 170  SEA  830A  TPA  843P  BL    2    72S            F  Y  B  M  Q
+HP 215  SFO  810A  ABQ 1243P        1    73S            Y  B  H  K  Q
+WN 964  SFO  600P  ABQ  915P        0    73S            Y  K  L  B  Q
+DL 618  SFO  700A  ATL  554P  BS    2    757            F  Y  B  M  Q
+DL 331  SFO  830A  ATL  348P  B     0    L10            F  Y  B  M  Q
+AA 530  SFO 1222P  BNA  638P  L     0    S80            F  Y  B  H  M
+AA 566  SFO  700A  BOS  519P  RS    1    S80            F  Y  B  H  M
+US1118  SFO  705A  BOS  627P  LD    2    733            F  Y  B  H  Q
+UA  92  SFO  800A  BOS  429P  BS    0    757            F  Y  B  M  Q
+AA1256  SFO  640A  DCA  447P  #     1    757            F  Y  B  H  M
+US1492  SFO  700A  DCA  546P  SB    2    733            F  Y  B  H  Q
+UA 654  SFO  630A  DEN  952A  B     0    72S            F  Y  B  M  Q
+UA 506  SFO  420P  DEN  743P  S     0    735            F  Y  B  M  Q
+UA 490  SFO  705P  DEN 1029P  D     0    733            F  Y  B  M  Q
+AA 254  SFO  500P  DFW 1013P  D     0    767            F  Y  B  H  M
+DL 852  SFO  555P  DFW 1102P  D     0    767            F  Y  B  M  Q
+NW 340  SFO  810A  DTW  335P  B     0    D10            F  Y  B  M  H
+NW 342  SFO 1220P  DTW  749P  L     0    757            F  Y  B  M  H
+WN 955  SFO  815A  HOU  245P        1    733            Y  K  L  B  Q
+WN 969  SFO  930A  HOU  435P        2    73S            Y  K  L  B  Q
+AA  16  SFO 1230P  JFK  846P  L     0    767            F  Y  B  H  M
+DL1426  SFO 1255P  JFK 1045P  LD    1    757            F  Y  B  M  Q
+DL 808  SFO  600A  LAX  704A  S     0    757            F  Y  B  M  Q
+DL 823  SFO  800A  LAX  915A  S     0    73S            F  Y  B  M  Q
+DL1025  SFO 1000A  LAX 1112A  S     0    73S            F  Y  B  M  Q
+US 264  SFO 1200N  LAX  110P  S     0    733            F  Y  B  H  Q
+US2170  SFO  100P  LAX  218P  S     0    733            F  Y  B  H  Q
+DL 275  SFO  200P  LAX  312P  S     0    73S            F  Y  B  M  Q
+DL 387  SFO  300P  LAX  411P  S     0    73S            F  Y  B  M  Q
+DL 453  SFO  400P  LAX  511P  S     0    73S            F  Y  B  M  Q
+US2192  SFO  500P  LAX  610P  S     0    733            F  Y  B  H  Q
+US2188  SFO  600P  LAX  710P  S     0    733            F  Y  B  H  Q
+DL 979  SFO  700P  LAX  812P  S     0    73S            F  Y  B  M  Q
+DL 805  SFO  800P  LAX  915P        0    73S            F  Y  B  M  H
+UA1131  SFO  900P  LAX 1017P        0    72S            F  Y  B  M  Q
+US2389  SFO 1000P  LAX 1116P        0    734           FN YN BN HN QN
+PA 445  SFO  700A  MIA  519P  SB    1    AB3            F  Y  B  M  Q
+AA1540  SFO  730A  MIA  345P  R     0    767            F  C  Y  B  M
+NW 928  SFO  130A  MSP  700A  S     0    757            F  Y  B  M  H
+DL 618  SFO  700A  MSY  250P  BS    1    757            F  Y  B  M  Q
+AA 580  SFO 1225A  ORD  915A  B     1    757            F YN  B  M  Q
+AA 778  SFO  620A  ORD 1233P  B     0    S80            F  Y  B  M  H
+UA 194  SFO  420P  ORD 1021P  D     0    757            F  Y  B  M  Q
+US1776  SFO  745A  PHL  341P  B     0    767            F  Y  B  H  Q
+US 624  SFO 1140P  PHL 1002A  S     1    733           FN YN BN HN QN
+HP 897  SFO  655A  PHX  950A  #     0    733            F  Y  B  H  K
+HP1236  SFO  520P  PHX  926P        1    733            Y  B  H  K  Q
+UA1750  SFO  630A  SEA  831A  B     0    73S            F  Y  B  M  Q
+AS 147  SFO 1025A  SEA 1220P  L     0    727            F  Y  B  M  H
+US2173  SFO  410P  SEA  610P  S     0    733            F  Y  B  H  Q
+UA1774  SFO  920P  SEA 1122P  #     0    733            F  Y  B  M  Q
+TW 152  SFO  640A  STL 1218P  B     0    L10            F  C  Y  B  Q
+HP1406  SFO  225P  STL 1011P  #     1    320            F  Y  B  H  K
+NW  28  SFO 1245P  TPA 1025P  L     1    72S            Y  B  M  H  Q
+TW 297  STL  917A  ABQ 1102A  S     0    72S            F  Y  B  Q  M
+DL 828  STL  630A  ATL  858A  #     0    D9S            F  Y  B  M  Q
+DL1434  STL  500P  ATL  726P  #     0    72S            F  Y  B  M  Q
+AA1628  STL  631A  BNA  731A  #     0    727            F  Y  B  H  M
+TW 686  STL  802P  BNA  918P        0    D9S            F  Y  B  Q  M
+TW 196  STL  741A  BOS 1109A  B     0    M80            F  Y  B  Q  M
+AA 278  STL  220P  BOS  747P  D     1    S80            F  Y  B  H  M
+TW  80  STL  749A  DCA 1040A  B     0    M80            F  Y  B  Q  M
+TW 240  STL  812P  DCA 1108P  #     0    M80            F  Y  B  Q  M
+UA 679  STL  640A  DEN  757A  B     0    72S            F  Y  B  M  Q
+AA 801  STL  655A  DFW  844A  B     0    727            F  Y  B  H  M
+AD1218  STL  205P  DFW  545P        3    SWM            Y  K  Q  V  H
+NW 460  STL  720A  DTW  948A  S     0    DC9            F  Y  B  M  H
+WN 356  STL  345P  DTW  705P        1    73S            Y  K  L  B  Q
+WN 531  STL  845A  HOU 1040A        0    733            Y  K  L  B  Q
+WN 469  STL 1115A  HOU  210P        1    733            Y  K  L  B  Q
+WN 759  STL  400P  HOU  545P        0    73S            Y  K  L  B  Q
+WN 663  STL  920P  HOU 1115P        0    733            Y  K  L  B  Q
+TW 700  STL  125P  JFK  617P  #     1    72S            F  Y  B  Q  M
+TW  60  STL  146P  JFK  520P  S     0    72S            F  Y  B  Q  M
+TW 443  STL  902A  LAX 1109A  B     0    72S            F  Y  B  Q  M
+TW 223  STL  907A  LAX  130P  B     1    M80            F  Y  B  Q  M
+AA1363  STL  710A  MIA 1248P  #     1    72S            F  Y  B  M  H
+TW 204  STL  449P  MIA 1034P  D     2    M80            F  Y  B  Q  M
+TW 492  STL  458P  MIA  838P  D     0    L10            F  C  Y  B  Q
+NW 707  STL  700A  MSP  830A  S     0    D9S           FN YN BN  M  H
+NW 598  STL  520P  MSP  655P        0    D9S            F  Y  B  M  H
+TW 331  STL  639P  MSP  815P  S     0    72S            F  Y  B  Q  M
+TW 539  STL  817A  MSY 1009A  B     0    D9S            F  Y  B  Q  M
+TW 633  STL 1157A  MSY  149P  #     0    M80            F  Y  B  Q  M
+UA 984  STL  611A  ORD  715A  S     0    72S            F  Y  B  M  Q
+UA 288  STL  910A  ORD 1024A  S     0    72S            F  Y  B  M  Q
+TW 574  STL  509P  ORD  626P  #     0    M80            F  Y  B  Q  M
+US 272  STL  615A  PHL  908A  B     0    100            F  Y  B  H  Q
+UA 288  STL  910A  PHL  159P  SL    1    72S            F  Y  B  M  Q
+HP 851  STL  630A  PHX  845A  B     0    320            F  Y  B  H  K
+WN 517  STL  800A  PHX 1105A        1    73S            Y  K  L  B  Q
+TW 694  STL  739A  RDU 1029A  B     0    D9S            F  Y  B  Q  M
+TW  29  STL  917A  SEA 1200N  B     0    M80            F  Y  B  Q  M
+AA 217  STL  350P  SEA  858P  D     1    S80            F  Y  M  B  H
+TW 223  STL  907A  SFO 1139A  B     0    M80            F  Y  B  Q  M
+WN 653  STL 1015A  SFO  320P        2    735            Y  K  L  B  Q
+TW 226  STL 1100A  TPA  221P  #     0    72S            F  Y  B  Q  M
+NW 880  STL 1155A  TPA  425P  S     1    D9S            F  Y  B  M  H
+AA1111  TPA  717P  ABQ 1043P  D     1    72S            F  Y  H  B  M
+DL 422  TPA  725A  ATL  856A  #     0    763            F  Y  B  M  Q
+DL 582  TPA  930P  ATL 1047P        0    763           FN YN BN MN QN
+AA1357  TPA  815A  BNA  907A  B     0    72S            F  Y  B  M  H
+AA 483  TPA  520P  BNA  818P  D     1    72S            F  Y  H  B  M
+US1617  TPA 1035A  BOS  309P  L     1    734            F  Y  B  H  Q
+DL 208  TPA 1140A  BOS  224P  L     0    757            F  Y  B  M  Q
+US 728  TPA  830A  DCA 1033A  B     0    734            F  Y  B  H  Q
+TW 457  TPA  700A  DEN 1050A  BS    1    72S            F  Y  B  Q  M
+DL 581  TPA  600A  DFW  733A  B     0    M80           FN YN BN MN QN
+AA 719  TPA  120P  DFW  256P  #     0    72S            F  Y  B  H  M
+DL 868  TPA  610A  DTW 1010A  #     1    72S           F@ Y@ B@ M@ Q@
+NW 479  TPA  855A  DTW 1134A  B     0    72S           FN YN BN  M  H
+US1644  TPA  110P  JFK  522P  L     1    734            F  Y  B  H  Q
+DL 477  TPA  745A  LAX 1059A  B     1    763            F  Y  B  M  Q
+DL 141  TPA  555P  LAX  753P  D     0    757            Y  B  M  Q  H
+PA 985  TPA  915A  MIA 1013A        0    72S            F  Y  B  M  Q
+TW 204  TPA  845P  MIA 1034P        1    M80            F  Y  B  Q  M
+NW 447  TPA  835A  MSP 1050A  B     0    72S            F  Y  B  M  H
+DL 324  TPA  545P  MSP  932P  D     1    M80            F  Y  B  M  Q
+CO 119  TPA  220P  MSY  254P        0    733            A  Y  Q  H  K
+UA 733  TPA  710A  ORD  855A  B     0    757            F  Y  B  M  Q
+NW 479  TPA  855A  ORD 1235P  B     1    72S            F  Y  B  M  H
+US 524  TPA  645A  PHL  859A  B     0    M80            F  Y  B  H  Q
+DL 276  TPA 1000A  PHL  140P  L     1    72S            F  Y  B  M  Q
+US 854  TPA  755P  PHL 1019P  S     0    734            F  Y  B  H  Q
+DL 219  TPA  415P  PHX  820P  SD    1    72S            F  Y  B  M  Q
+AA1630  TPA  636A  RDU  816A  B     0    72S            F  Y  B  H  M
+AA 483  TPA  520P  RDU  701P  D     0    72S            F  Y  B  H  M
+DL1063  TPA  635A  SEA 1235P  BL    2    757            F  Y  B  M  Q
+UA 177  TPA 1255P  SEA  551P  LD    1    72S            F  Y  B  M  Q
+DL 141  TPA  555P  SFO 1017P  D     1    757            Y  B  M  Q  H
+TW 377  TPA  426P  STL  554P  D     0    72S            F  Y  B  Q  M
