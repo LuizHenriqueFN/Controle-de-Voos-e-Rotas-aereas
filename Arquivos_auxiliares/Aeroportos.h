@@ -1,0 +1,24 @@
+//Vértices = 
+#define ABQ 0
+#define ATL 1
+#define BNA 2
+#define BOS 3
+#define DCA 4
+#define DEN 5
+#define DFW 6
+#define DTW 7
+#define HOU 8
+#define JFK 9
+#define LAX 10
+#define MIA 11
+#define MSP 12
+#define MSY 13
+#define ORD 14
+#define PHL 15
+#define PHX 16
+#define PVD 17
+#define RDU 18
+#define SEA 19
+#define SFO 20
+#define STL 21
+#define TPA 22

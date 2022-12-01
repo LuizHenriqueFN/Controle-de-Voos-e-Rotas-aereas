@@ -1,6 +1,14 @@
 #include "TAD_Grafos.h"
-
 /*
+Anotações:
+1 - Verificar se é pra ler o arquivo
+2 - Verificar se o grafo de Rotas precisa de pesos.
+3 - Verificar se possui voos quando inserir rotas.
+4 - Significado de 257p
+5 - Relatório 5.1
+6 - Relatório 5.4
+
+
 Orientações:
 1. Elaborar uma estrutura de dados que suporte dois grafos, o das rotas e o dos voos, os quais
 partilham os mesmos vértices, ou seja, os aeroportos.
@@ -29,7 +37,93 @@ impediriam essa situação.
 aeroportos e retornar até ele. Essa rota pode ser classificada como um circuito Hamiltoniano?
 */
 
+void Aeroportos(GRAFO *grafo){
+    if(grafo == NULL) return;
+
+    char Linha[LIM];
+    String result;
+    int i = 0;
+
+    FILE *arq = fopen("./Arquivos_auxiliares//Voos_Formatados.txt", "r");
+    if(arq == NULL) return;
+
+    printf("\n\tAeroportos:");
+    while(true){
+        result = fgets(Linha, LIM, arq);
+        if(Linha[0] == '!')break;
+
+        if(result){
+            printf("\n%c%c%c", Linha[0], Linha[1], Linha[2]);
+        }
+    }
+    fclose(arq);
+}
+
 int main(){
     system("clear");
-    return 0;
+    int opcao;
+    char escolha[4] = {};
+    int origem, destino, anterior[TAM], distancia[TAM];;
+    GRAFO *grafos = iniciaGrafo(TAM);
+    leArquivoVoos(grafos);
+
+    do{
+        printf(
+            "\n1 - Imprimir"
+            "\n2 - Caminho"
+            "\n3 - Voos Diretos"
+            "\n4 - Viagem com menor custo"
+            "\n5 - A partir de um aeroporto qualquer atingir qualquer outro"
+            "\n6 - Rota para passar por todos os aeroportos"
+            "\n0 - Sair"
+            "\n> "
+        );
+        scanf("%d%*c", &opcao);
+
+        switch(opcao){
+            case 0:
+                return 0;
+            case 1: 
+                imprimir(grafos);
+                break;
+            case 2: 
+                Aeroportos(grafos);
+                // printf("\nOrigem: ");
+                // scanf("%c%c%c%*c", &escolha[0], &escolha[1], &escolha[2]);
+                // origem = converteStringAeroporto(escolha);
+                // printf("\nDestino: ");
+                // scanf("%c%c%c%*c", &escolha[0], &escolha[1], &escolha[2]);
+                // destino = converteStringAeroporto(escolha);
+                // caminho(grafos, origem, destino);
+                caminho(grafos, 0, 6);
+                break;
+            case 3:
+                Aeroportos(grafos);
+                printf("\nEscolha: ");
+                scanf("%c%c%c%*c", &escolha[0], &escolha[1], &escolha[2]);
+                voosDiretos(grafos, converteStringAeroporto(escolha));
+                break;
+            case 4:
+                Aeroportos(grafos);
+                printf("\nOrigem: ");
+                scanf("%c%c%c%*c", &escolha[0], &escolha[1], &escolha[2]);
+                origem = converteStringAeroporto(escolha);
+                printf("\nDestino: ");
+                scanf("%c%c%c%*c", &escolha[0], &escolha[1], &escolha[2]);
+                destino = converteStringAeroporto(escolha);
+                caminho(grafos, origem, destino);
+                menorCaminho_Grafo(grafos, origem, anterior, distancia, destino);
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 10:
+                system("clear");
+                break;
+            default:
+                printf("\nERRO!Opção inválida. Tente novamente:");
+                break;
+        }
+    }while(true);
 }
